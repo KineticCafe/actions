@@ -56,6 +56,17 @@ outputs:
 runs:
   using: 'composite'
   steps:
+    - shell: bash
+      run: |
+        echo '::warning::⛔️  This action, KineticCafe/actions/extract-changelog is deprecated.'
+        echo '::warning::⛔️  There is no replacement.'
+
+        {
+          echo '### ⛔️ Deprecated'
+          echo 'This action, KineticCafe/actions/extract-changelog is deprecated.'
+          echo 'There is no replacement.'
+        } >> "$GITHUB_STEP_SUMMARY"
+
     - id: extract
       shell: bash
       env:

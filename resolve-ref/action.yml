@@ -76,6 +76,17 @@ outputs:
 runs:
   using: 'composite'
   steps:
+    - shell: bash
+      run: |
+        echo '::warning::⛔️  This action, KineticCafe/actions/resolve-ref is deprecated.'
+        echo '::warning::⛔️  There is no replacement.'
+
+        {
+          echo '### ⛔️ Deprecated'
+          echo 'This action, KineticCafe/actions/resolve-ref is deprecated.'
+          echo 'There is no replacement.'
+        } >> "$GITHUB_STEP_SUMMARY"
+
     - id: resolver
       shell: bash
       env:
