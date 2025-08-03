@@ -1,5 +1,13 @@
 # KineticCafe/actions Changelog
 
+## 2.0.2 / 2025-08-02
+
+This repo is archived with this release. All composite workflows in this release
+have a `warning` annotation added about this deprecation. The annotation
+includes a recommendation to migrate to `halostatue/dependabot-automerge`
+instead of `KineticCafe/actions/dependabot-automerge`, but the other workflows
+are deprecated without replacement.
+
 ## 2.0.1 / 2025-03-25
 
 - Composite actions have been pinned.

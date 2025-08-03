@@ -40,6 +40,17 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - shell: bash
+      run: |
+        echo '::warning::⛔️  This action, KineticCafe/actions/dependabot-automerge is deprecated.'
+        echo '::warning::➡️  Use halostatue/dependabot-automerge instead.'
+
+        {
+          echo '### ⛔️ Deprecated'
+          echo 'This action, KineticCafe/actions/dependabot-automerge is deprecated.'
+          echo 'Use [halostatue/dependabot-automerge](https://github.com/halostatue/dependabot-automerge) instead.'
+        } >> "$GITHUB_STEP_SUMMARY"
+
     - if: >
         (github.event_name == 'pull_request' || github.event_name == 'pull_request_target')
         && github.actor == 'dependabot[bot]'
